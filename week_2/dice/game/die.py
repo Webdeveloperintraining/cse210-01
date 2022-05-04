@@ -20,7 +20,9 @@ class Die:
     Args:
         self (Die): An instance of Die.
     """
-
+    def __init__(self):
+        self.value=0
+        self.points=0
         
 # 3) Create the roll(self) method. Use the following method comment.
     """Generates a new random value and calculates the points.
@@ -28,5 +30,18 @@ class Die:
     Args:
         self (Die): An instance of Die.
     """
+    def roll(self):
+        self.value=random.randint(1,6)
+        if self.value==5:
+            self.points=50 
+        elif self.value==1:
+            self.points=100
+        elif self.value!=5 or 1:
+            self.points=0
+
+
+
+
+
 
         

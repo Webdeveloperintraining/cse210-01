@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 
 # TODO: Implement the Die class as follows...
@@ -21,8 +21,8 @@ class Die:
         self (Die): An instance of Die.
     """
     def __init__(self):
-        self.value=0
-        self.points=0
+        self.value=int()
+        self.points=int()
         
 # 3) Create the roll(self) method. Use the following method comment.
     """Generates a new random value and calculates the points.
@@ -31,7 +31,7 @@ class Die:
         self (Die): An instance of Die.
     """
     def roll(self):
-        self.value=random.randint(1,6)
+        self.value=randint(1,6)
         if self.value==5:
             self.points=50 
         elif self.value==1:
